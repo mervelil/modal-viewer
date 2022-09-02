@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+    <div class="container" id="blur">
+        <div class="content"> 
+          
+           <h2>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa, non?
+            </h2>
+            <img src="pexels-julie-aagaard-1426718.jpg" alt=""> 
+            <a href="#" onclick="toogle()">Read More</a>
+        </div>  
+
+    </div>
+     <div id="popup"> 
+      
+      
+       <model-viewer alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" src="model-viewer-master/packages/shared-assets/models/Astronaut.glb" ar ar-modes="webxr scene-viewer quick-look" environment-image="model-viewer-master/packages/shared-assets/environments/moon_1k.hdr" poster="model-viewer-master/packages/shared-assets/models/NeilArmstrong.webp" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+      
+       <a href="#" onclick="toogle()">Close</a>
+     </div>
+    <script type="text/javascript">
+        function toogle() {
+            var blur=document.getElementById('blur');
+            blur.classList.toggle('active');
+            var popup=document.getElementById('popup');
+            popup.classList.toggle('active');
+        }
+    </script>
+    
+    
+
+</body>
+</html>
